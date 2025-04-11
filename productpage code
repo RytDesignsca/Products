@@ -65,6 +65,11 @@
       max-width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .product-image img:hover {
+      transform: scale(1.05);
     }
 
     .product-details {
@@ -92,22 +97,37 @@
     .product-actions {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .product-actions button {
       padding: 0.75rem 1.5rem;
-      background-color: var(--accent);
       border: none;
       color: var(--inverse-text-color);
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
       border-radius: 4px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .product-actions button:hover {
+    /* Standard Button Style (for Add to Cart and Contact Us) */
+    .product-actions button:not(.buy-btn) {
+      background-color: var(--accent);
+    }
+    
+    .product-actions button:not(.buy-btn):hover {
       background-color: darkcyan;
+    }
+
+    /* Fancy Buy Now Button Style */
+    .product-actions .buy-btn {
+      background: linear-gradient(45deg, var(--accent), darkcyan);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .product-actions .buy-btn:hover {
+      transform: translateY(-3px);
     }
 
     /* Related Products Section */
@@ -193,6 +213,7 @@
       <p>Stand out in the market with a memorable and impactful logo.</p>
       <div class="product-price">$30</div>
       <div class="product-actions">
+        <button class="buy-btn" onclick="buyNow('Logo Design', 30)">Buy Now</button>
         <button onclick="addToCart('Logo Design', 30)">Add to Cart</button>
         <button onclick="window.location.href='#contact'">Contact Us</button>
       </div>
@@ -228,20 +249,26 @@
     <p><a href="index.html">Back to Home</a></p>
   </footer>
 
-  <!-- JavaScript for Cart -->
+  <!-- JavaScript for Cart and Buy Now -->
   <script>
     let cart = [];
+
     function addToCart(name, price) {
       const existing = cart.find(item => item.name === name);
       if (existing) {
         existing.quantity += 1;
       } else {
-        cart.push({ name, price, quantity: 1 });
+        cart.push({ name: name, price: price, quantity: 1 });
       }
-      alert(`${name} has been added to your cart.`);
+      alert(name + " has been added to your cart.");
       console.log(cart);
+    }
+
+    function buyNow(name, price) {
+      // For demonstration purposes, this function simply alerts.
+      // In a real-world application, it might redirect the user to a checkout page.
+      alert("Proceeding to buy " + name + " for $" + price + ".");
     }
   </script>
 </body>
 </html>
-
