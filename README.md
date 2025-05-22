@@ -1,17 +1,12 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="description" content="Product Page - RYT DESIGNS" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Page - RYT DESIGNS</title>
+  <title>Products - RYT DESIGNS</title>
   <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * {margin:0; padding:0; box-sizing:border-box;}
     :root {
       --primary-bg: #ffffff;
       --secondary-bg: #f7f7f7;
@@ -20,238 +15,374 @@
       --inverse-text-color: #ffffff;
       --accent: #008080;
     }
-
     body {
       background-color: var(--primary-bg);
       color: var(--text-color);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
     }
-
     a {
       color: var(--accent);
       text-decoration: none;
     }
-
-    /* Header */
     header {
       background-color: var(--header-footer-bg);
       padding: 1rem;
       text-align: center;
       color: var(--inverse-text-color);
     }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    /* Product Section */
-    .product-container {
-      max-width: 1200px;
+    header h1 {font-size:2rem;}
+    .products-section {
+      max-width: 1300px;
       margin: 2rem auto;
       padding: 1rem;
+      background: var(--secondary-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+    .products-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
+      justify-content: center;
     }
-
-    .product-image {
-      flex: 1 1 400px;
+    .product-card {
+      background: var(--primary-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      width: 255px;
+      transition: transform 0.24s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 1rem 1.5rem 1rem;
+      position: relative;
+    }
+    .product-card img {
+      width: 210px; height:140px; object-fit: cover;
+      border-radius: 7px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 1rem;
+      background: #f1f1f1;
+    }
+    .product-card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+      color: var(--text-color);
       text-align: center;
+      font-weight: 600;
     }
-
-    .product-image img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .product-image img:hover {
-      transform: scale(1.05);
-    }
-
-    .product-details {
-      flex: 2 1 600px;
-      padding: 1rem;
-    }
-
-    .product-details h2 {
-      font-size: 2rem;
+    .product-card p {
+      font-size: 0.95rem;
       margin-bottom: 1rem;
+      min-height: 28px;
+      text-align: center;
+      color: #333;
     }
-
-    .product-details p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
     .product-price {
-      font-size: 1.5rem;
+      font-size: 1.18rem;
       font-weight: bold;
       color: var(--accent);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.8rem;
     }
-
     .product-actions {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
     }
-
     .product-actions button {
-      padding: 0.75rem 1.5rem;
+      padding: 0.6rem 1.2rem;
       border: none;
       color: var(--inverse-text-color);
-      font-size: 1rem;
+      font-size: 0.97rem;
       font-weight: bold;
       cursor: pointer;
       border-radius: 4px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    /* Standard Button Style (for Add to Cart and Contact Us) */
-    .product-actions button:not(.buy-btn) {
       background-color: var(--accent);
+      transition: background-color 0.2s, transform 0.2s;
     }
-    
-    .product-actions button:not(.buy-btn):hover {
-      background-color: darkcyan;
-    }
-
-    /* Fancy Buy Now Button Style */
-    .product-actions .buy-btn {
+    .product-actions button.buy-btn {
       background: linear-gradient(45deg, var(--accent), darkcyan);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
-    
-    .product-actions .buy-btn:hover {
-      transform: translateY(-3px);
+    .product-actions button:hover {
+      background: darkcyan;
+      transform: translateY(-2px);
     }
-
-    /* Related Products Section */
-    .related-products {
-      background-color: var(--secondary-bg);
-      padding: 2rem;
+    @media (max-width:900px){
+      .products-grid { flex-direction: column; align-items:center;}
+      .product-card { width: 95%; max-width: 310px;}
     }
-
-    .related-products h3 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-
-    .related-products-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .related-product {
-      background-color: var(--header-footer-bg);
-      color: var(--inverse-text-color);
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      flex: 1 1 200px;
-      transition: transform 0.3s ease;
-    }
-
-    .related-product:hover {
-      transform: translateY(-5px);
-    }
-
-    .related-product img {
-      max-width: 100%;
-      border-radius: 4px;
-      margin-bottom: 0.5rem;
-    }
-
-    .related-product h4 {
-      margin-bottom: 0.5rem;
-    }
-
-    .related-product p {
-      font-size: 0.9rem;
-    }
-
-    /* Footer */
     footer {
+      margin-top:2rem;
       background-color: var(--header-footer-bg);
       text-align: center;
       padding: 1rem;
       color: var(--inverse-text-color);
     }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      color: var(--inverse-text-color);
-    }
+    footer a { color: var(--accent); text-decoration: none; font-weight: bold;}
+    footer a:hover { color: var(--inverse-text-color);}
+    .section-title {text-align:center; font-size:1.8rem; margin-bottom:2rem; letter-spacing:1px;}
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1>Product Page - RYT DESIGNS</h1>
+    <h1>Products - RYT DESIGNS</h1>
   </header>
 
-  <!-- Product Section -->
-  <section class="product-container">
-    <div class="product-image">
-      <img src="website prototype/Logo 4 website.png" alt="Product Image" />
-    </div>
-    <div class="product-details">
-      <h2>Logo Design</h2>
-      <p>Our logo design service offers creative and professional designs tailored to your brand's identity.</p>
-      <p>Stand out in the market with a memorable and impactful logo.</p>
-      <div class="product-price">$30</div>
-      <div class="product-actions">
-        <button class="buy-btn" onclick="buyNow('Logo Design', 30)">Buy Now</button>
-        <button onclick="addToCart('Logo Design', 30)">Add to Cart</button>
-        <button onclick="window.location.href='#contact'">Contact Us</button>
-      </div>
-    </div>
-  </section>
+  <section class="products-section">
+    <div class="section-title">Our Products &amp; Services</div>
+    <div class="products-grid">
 
-  <!-- Related Products -->
-  <section class="related-products">
-    <h3>Related Products</h3>
-    <div class="related-products-container">
-      <div class="related-product">
-        <img src="website prototype/business card proto.jpg" alt="Business Card" />
-        <h4>Business Card Design</h4>
-        <p>$20</p>
+      <!-- Poster / Flyer -->
+      <div class="product-card">
+        <img src="website prototype/Ryt Designs Poster.png" alt="Poster / Flyer" />
+        <h3>Poster / Flyer Design</h3>
+        <p>Custom posters or flyers for your next event, business, or announcement.</p>
+        <div class="product-price">$15</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Poster/Flyer', 15)">Buy Now</button>
+          <button onclick="addToCart('Poster/Flyer', 15)">Add to Cart</button>
+        </div>
       </div>
-      <div class="related-product">
-        <img src="website prototype/invitation 4 website.png" alt="Invitation" />
-        <h4>Invitation Design</h4>
-        <p>$24</p>
+
+      <!-- Video for Events -->
+      <div class="product-card">
+        <img src="website prototype/Ryt Designs video.mp4" alt="Video for Events" />
+        <h3>Event Video</h3>
+        <p>Professionally crafted videos for events or social media.</p>
+        <div class="product-price">$25</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Event Video', 25)">Buy Now</button>
+          <button onclick="addToCart('Event Video', 25)">Add to Cart</button>
+        </div>
       </div>
-      <div class="related-product">
+
+      <!-- Business Cards -->
+      <div class="product-card">
+        <img src="website prototype/business card proto.jpg" alt="Business Card Design" />
+        <h3>Business Card Design</h3>
+        <p>Modern, eye-catching business card design tailored to you.</p>
+        <div class="product-price">$20</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Business Card', 20)">Buy Now</button>
+          <button onclick="addToCart('Business Card', 20)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Invitation -->
+      <div class="product-card">
+        <img src="website prototype/invitation 4 website.png" alt="Invitation Design" />
+        <h3>Invitation Design</h3>
+        <p>Customized invitations for all events and occasions.</p>
+        <div class="product-price">$24</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Invitation', 24)">Buy Now</button>
+          <button onclick="addToCart('Invitation', 24)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="product-card">
+        <img src="website prototype/Logo 4 website.png" alt="Logo Design" />
+        <h3>Logo Design</h3>
+        <p>Professional logos to brand your business or projects.</p>
+        <div class="product-price">$30</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Logo', 30)">Buy Now</button>
+          <button onclick="addToCart('Logo', 30)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- YouTube Thumbnail (Basic) -->
+      <div class="product-card">
         <img src="website prototype/youtube thumbnail 4 website.png" alt="YouTube Thumbnail" />
-        <h4>YouTube Thumbnail</h4>
-        <p>$20</p>
+        <h3>YouTube Thumbnail (Basic)</h3>
+        <p>Attention-grabbing thumbnails for your YouTube channel.</p>
+        <div class="product-price">$20</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('YouTube Thumbnail (Basic)', 20)">Buy Now</button>
+          <button onclick="addToCart('YouTube Thumbnail (Basic)', 20)">Add to Cart</button>
+        </div>
       </div>
+
+      <!-- YouTube Thumbnail (Add-ons) -->
+      <div class="product-card">
+        <img src="website prototype/youtube thumbnail 4 website.png" alt="YouTube Thumbnail Add-on" />
+        <h3>YouTube Thumbnail (Add-ons)</h3>
+        <p>Includes advanced enhancements or multiple variations.</p>
+        <div class="product-price">$35</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('YouTube Thumbnail (Add-ons)', 35)">Buy Now</button>
+          <button onclick="addToCart('YouTube Thumbnail (Add-ons)', 35)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Celebration Card -->
+      <div class="product-card">
+        <img src="website prototype/Celeb 4 website.png" alt="Celebration Card" />
+        <h3>Celebration Card</h3>
+        <p>Fun, vibrant cards for birthdays, holidays, and celebrations.</p>
+        <div class="product-price">$10</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Celebration Card', 10)">Buy Now</button>
+          <button onclick="addToCart('Celebration Card', 10)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Presentation Design -->
+      <div class="product-card">
+        <img src="website prototype/Ryt Designs presentation.pdf" alt="Presentation" />
+        <h3>Presentation Design</h3>
+        <p>Visually appealing presentations to impress your audience.</p>
+        <div class="product-price">$30</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Presentation', 30)">Buy Now</button>
+          <button onclick="addToCart('Presentation', 30)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Menu Design -->
+      <div class="product-card">
+        <img src="website prototype/Menu 4 website.png" alt="Menu Design" />
+        <h3>Menu Design</h3>
+        <p>Professional menus for restaurants, cafés, or events.</p>
+        <div class="product-price">$20</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Menu', 20)">Buy Now</button>
+          <button onclick="addToCart('Menu', 20)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Banner -->
+      <div class="product-card">
+        <img src="website prototype/Banner 4 website.png" alt="Banner Design" />
+        <h3>Banner Design</h3>
+        <p>Bold and creative banners for web or print use.</p>
+        <div class="product-price">$35</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Banner', 35)">Buy Now</button>
+          <button onclick="addToCart('Banner', 35)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Label -->
+      <div class="product-card">
+        <img src="website prototype/Product label.png" alt="Product Label" />
+        <h3>Product Label Design</h3>
+        <p>Attractive, informative product labeling for your brand.</p>
+        <div class="product-price">$25</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Product Label', 25)">Buy Now</button>
+          <button onclick="addToCart('Product Label', 25)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Basic Designs (Simple Text or Graphics) -->
+      <div class="product-card">
+        <img src="website prototype/Album cover.png" alt="Basic Design" />
+        <h3>Basic Designs (Simple Text/Graphics)</h3>
+        <p>Simple graphics or text-based designs for various uses.<br/>Price depends on complexity.</p>
+        <div class="product-price">$10 - $50</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Basic Design', 10)">Buy Now</button>
+          <button onclick="addToCart('Basic Design', 10)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Prototype Package (ZIP) -->
+      <div class="product-card">
+        <img src="website prototype/Ryt Designs package prototype.zip" alt="Product Prototype Package" />
+        <h3>Product Prototype Package</h3>
+        <p>Package includes full product design assets (ZIP Download).</p>
+        <div class="product-price">Custom</div>
+        <div class="product-actions">
+          <button onclick="window.location.href='#contact'">Contact Us</button>
+        </div>
+      </div>
+
+      <!-- Album Cover -->
+      <div class="product-card">
+        <img src="website prototype/Album cover.png" alt="Album Cover" />
+        <h3>Album Cover</h3>
+        <p>Get a custom album or song cover design.</p>
+        <div class="product-price">$20</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Album Cover', 20)">Buy Now</button>
+          <button onclick="addToCart('Album Cover', 20)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Website Prototype -->
+      <div class="product-card">
+        <img src="website prototype/Website prototype.html" alt="Website Prototype" />
+        <h3>Website Prototype</h3>
+        <p>Clean and modern prototype designs for your website concepts.</p>
+        <div class="product-price">Custom</div>
+        <div class="product-actions">
+          <button onclick="window.location.href='#contact'">Contact Us</button>
+        </div>
+      </div>
+
+      <!-- Product Image Sample (jpg) -->
+      <div class="product-card">
+        <img src="website prototype/Product 4 website.jpg" alt="Product Sample" />
+        <h3>Product Sample Image</h3>
+        <p>Sample product visuals for your display or marketing needs.</p>
+        <div class="product-price">$20</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Product Sample', 20)">Buy Now</button>
+          <button onclick="addToCart('Product Sample', 20)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Other Items -->
+      <div class="product-card">
+        <img src="website prototype/Ryt Skin.png" alt="Ryt Skin" />
+        <h3>Ryt Skin</h3>
+        <p>Product or graphics related to the Ryt Skin collection.</p>
+        <div class="product-price">$25</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('Ryt Skin', 25)">Buy Now</button>
+          <button onclick="addToCart('Ryt Skin', 25)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="website prototype/T-Shirt design.png" alt="T-Shirt Design" />
+        <h3>T-Shirt Design</h3>
+        <p>Bold custom t-shirt graphics, both front and back!</p>
+        <div class="product-price">$22</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('T-Shirt Design', 22)">Buy Now</button>
+          <button onclick="addToCart('T-Shirt Design', 22)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="website prototype/Ryt Designs (new logo) (1).png" alt="New Logo" />
+        <h3>New Logo Version</h3>
+        <p>Alternative new look for your branding needs.</p>
+        <div class="product-price">$30</div>
+        <div class="product-actions">
+          <button class="buy-btn" onclick="buyNow('New Logo Version', 30)">Buy Now</button>
+          <button onclick="addToCart('New Logo Version', 30)">Add to Cart</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 RYT DESIGNS. All Rights Reserved.</p>
     <p>Designed by RYT DESIGNS</p>
     <p><a href="index.html">Back to Home</a></p>
   </footer>
 
-  <!-- JavaScript for Cart and Buy Now -->
   <script>
     let cart = [];
-
     function addToCart(name, price) {
       const existing = cart.find(item => item.name === name);
       if (existing) {
@@ -262,10 +393,7 @@
       alert(name + " has been added to your cart.");
       console.log(cart);
     }
-
     function buyNow(name, price) {
-      // For demonstration purposes, this function simply alerts.
-      // In a real-world application, it might redirect the user to a checkout page.
       alert("Proceeding to buy " + name + " for $" + price + ".");
     }
   </script>
