@@ -40,6 +40,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.07);
     }
+    .section-title {text-align:center; font-size:1.8rem; margin-bottom:2rem; letter-spacing:1px;}
     .products-grid {
       display: flex;
       flex-wrap: wrap;
@@ -58,33 +59,19 @@
       padding: 1rem 1rem 1.5rem 1rem;
       position: relative;
     }
-    .product-card img {
+    .product-card img, .product-card video, .product-card object {
       width: 210px; height:140px; object-fit: cover;
       border-radius: 7px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       margin-bottom: 1rem;
       background: #f1f1f1;
     }
-    .product-card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.15rem;
-      color: var(--text-color);
-      text-align: center;
-      font-weight: 600;
+    .product-card object {
+      pointer-events: none;
     }
-    .product-card p {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-      min-height: 28px;
-      text-align: center;
-      color: #333;
-    }
-    .product-price {
-      font-size: 1.18rem;
-      font-weight: bold;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
+    .product-card h3 {margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-color); text-align: center; font-weight: 600;}
+    .product-card p {font-size: 0.95rem; margin-bottom: 1rem; min-height: 28px; text-align: center; color: #333;}
+    .product-price {font-size: 1.18rem; font-weight: bold; color: var(--accent); margin-bottom: 0.8rem;}
     .product-actions {
       display: flex;
       gap: 0.5rem;
@@ -124,7 +111,6 @@
     }
     footer a { color: var(--accent); text-decoration: none; font-weight: bold;}
     footer a:hover { color: var(--inverse-text-color);}
-    .section-title {text-align:center; font-size:1.8rem; margin-bottom:2rem; letter-spacing:1px;}
   </style>
 </head>
 <body>
@@ -138,7 +124,7 @@
 
       <!-- Poster / Flyer -->
       <div class="product-card">
-        <img src="website prototype/Ryt Designs Poster.png" alt="Poster / Flyer" />
+        <img src="rytdesignsca-products-page/website/Ryt Designs Poster.png" alt="Poster / Flyer" />
         <h3>Poster / Flyer Design</h3>
         <p>Custom posters or flyers for your next event, business, or announcement.</p>
         <div class="product-price">$15</div>
@@ -150,7 +136,7 @@
 
       <!-- Video for Events -->
       <div class="product-card">
-        <img src="website prototype/Ryt Designs video.mp4" alt="Video for Events" />
+        <video src="rytdesignsca-products-page/website/Ryt Designs video.mp4" poster="rytdesignsca-products-page/website/YouTube thumbnail 4 website.png" controls></video>
         <h3>Event Video</h3>
         <p>Professionally crafted videos for events or social media.</p>
         <div class="product-price">$25</div>
@@ -162,7 +148,7 @@
 
       <!-- Business Cards -->
       <div class="product-card">
-        <img src="website prototype/business card proto.jpg" alt="Business Card Design" />
+        <img src="rytdesignsca-products-page/website/Business card proto.jpg" alt="Business Card Design" />
         <h3>Business Card Design</h3>
         <p>Modern, eye-catching business card design tailored to you.</p>
         <div class="product-price">$20</div>
@@ -174,7 +160,7 @@
 
       <!-- Invitation -->
       <div class="product-card">
-        <img src="website prototype/invitation 4 website.png" alt="Invitation Design" />
+        <img src="rytdesignsca-products-page/website/Invitation 4 website.png" alt="Invitation Design" />
         <h3>Invitation Design</h3>
         <p>Customized invitations for all events and occasions.</p>
         <div class="product-price">$24</div>
@@ -186,7 +172,7 @@
 
       <!-- Logo -->
       <div class="product-card">
-        <img src="website prototype/Logo 4 website.png" alt="Logo Design" />
+        <img src="rytdesignsca-products-page/website/Logo 4 website.png" alt="Logo Design" />
         <h3>Logo Design</h3>
         <p>Professional logos to brand your business or projects.</p>
         <div class="product-price">$30</div>
@@ -198,7 +184,7 @@
 
       <!-- YouTube Thumbnail (Basic) -->
       <div class="product-card">
-        <img src="website prototype/youtube thumbnail 4 website.png" alt="YouTube Thumbnail" />
+        <img src="rytdesignsca-products-page/website/YouTube thumbnail 4 website.png" alt="YouTube Thumbnail" />
         <h3>YouTube Thumbnail (Basic)</h3>
         <p>Attention-grabbing thumbnails for your YouTube channel.</p>
         <div class="product-price">$20</div>
@@ -210,7 +196,7 @@
 
       <!-- YouTube Thumbnail (Add-ons) -->
       <div class="product-card">
-        <img src="website prototype/youtube thumbnail 4 website.png" alt="YouTube Thumbnail Add-on" />
+        <img src="rytdesignsca-products-page/website/YouTube thumbnail 4 website.png" alt="YouTube Thumbnail Add-on" />
         <h3>YouTube Thumbnail (Add-ons)</h3>
         <p>Includes advanced enhancements or multiple variations.</p>
         <div class="product-price">$35</div>
@@ -222,7 +208,7 @@
 
       <!-- Celebration Card -->
       <div class="product-card">
-        <img src="website prototype/Celeb 4 website.png" alt="Celebration Card" />
+        <img src="rytdesignsca-products-page/website/Celeb 4 website.png" alt="Celebration Card" />
         <h3>Celebration Card</h3>
         <p>Fun, vibrant cards for birthdays, holidays, and celebrations.</p>
         <div class="product-price">$10</div>
@@ -234,7 +220,9 @@
 
       <!-- Presentation Design -->
       <div class="product-card">
-        <img src="website prototype/Ryt Designs presentation.pdf" alt="Presentation" />
+        <object data="rytdesignsca-products-page/website/Ryt Designs presentation.pdf" type="application/pdf" aria-label="Presentation PDF">
+          <img src="rytdesignsca-products-page/website/YouTube thumbnail 4 website.png" alt="Presentation" />
+        </object>
         <h3>Presentation Design</h3>
         <p>Visually appealing presentations to impress your audience.</p>
         <div class="product-price">$30</div>
@@ -246,7 +234,7 @@
 
       <!-- Menu Design -->
       <div class="product-card">
-        <img src="website prototype/Menu 4 website.png" alt="Menu Design" />
+        <img src="rytdesignsca-products-page/website/Menu 4 website.png" alt="Menu Design" />
         <h3>Menu Design</h3>
         <p>Professional menus for restaurants, cafés, or events.</p>
         <div class="product-price">$20</div>
@@ -258,7 +246,7 @@
 
       <!-- Banner -->
       <div class="product-card">
-        <img src="website prototype/Banner 4 website.png" alt="Banner Design" />
+        <img src="rytdesignsca-products-page/website/Banner 4 website.png" alt="Banner Design" />
         <h3>Banner Design</h3>
         <p>Bold and creative banners for web or print use.</p>
         <div class="product-price">$35</div>
@@ -270,7 +258,7 @@
 
       <!-- Product Label -->
       <div class="product-card">
-        <img src="website prototype/Product label.png" alt="Product Label" />
+        <img src="rytdesignsca-products-page/website/Product label.png" alt="Product Label" />
         <h3>Product Label Design</h3>
         <p>Attractive, informative product labeling for your brand.</p>
         <div class="product-price">$25</div>
@@ -282,7 +270,7 @@
 
       <!-- Basic Designs (Simple Text or Graphics) -->
       <div class="product-card">
-        <img src="website prototype/Album cover.png" alt="Basic Design" />
+        <img src="rytdesignsca-products-page/website/Album cover.png" alt="Basic Design" />
         <h3>Basic Designs (Simple Text/Graphics)</h3>
         <p>Simple graphics or text-based designs for various uses.<br/>Price depends on complexity.</p>
         <div class="product-price">$10 - $50</div>
@@ -292,20 +280,9 @@
         </div>
       </div>
 
-      <!-- Product Prototype Package (ZIP) -->
-      <div class="product-card">
-        <img src="website prototype/Ryt Designs package prototype.zip" alt="Product Prototype Package" />
-        <h3>Product Prototype Package</h3>
-        <p>Package includes full product design assets (ZIP Download).</p>
-        <div class="product-price">Custom</div>
-        <div class="product-actions">
-          <button onclick="window.location.href='#contact'">Contact Us</button>
-        </div>
-      </div>
-
       <!-- Album Cover -->
       <div class="product-card">
-        <img src="website prototype/Album cover.png" alt="Album Cover" />
+        <img src="rytdesignsca-products-page/website/Album cover.png" alt="Album Cover" />
         <h3>Album Cover</h3>
         <p>Get a custom album or song cover design.</p>
         <div class="product-price">$20</div>
@@ -315,20 +292,9 @@
         </div>
       </div>
 
-      <!-- Website Prototype -->
-      <div class="product-card">
-        <img src="website prototype/Website prototype.html" alt="Website Prototype" />
-        <h3>Website Prototype</h3>
-        <p>Clean and modern prototype designs for your website concepts.</p>
-        <div class="product-price">Custom</div>
-        <div class="product-actions">
-          <button onclick="window.location.href='#contact'">Contact Us</button>
-        </div>
-      </div>
-
       <!-- Product Image Sample (jpg) -->
       <div class="product-card">
-        <img src="website prototype/Product 4 website.jpg" alt="Product Sample" />
+        <img src="rytdesignsca-products-page/website/Product 4 website.jpg" alt="Product Sample" />
         <h3>Product Sample Image</h3>
         <p>Sample product visuals for your display or marketing needs.</p>
         <div class="product-price">$20</div>
@@ -338,9 +304,9 @@
         </div>
       </div>
 
-      <!-- Other Items -->
+      <!-- Ryt Skin -->
       <div class="product-card">
-        <img src="website prototype/Ryt Skin.png" alt="Ryt Skin" />
+        <img src="rytdesignsca-products-page/website/Ryt Skin.png" alt="Ryt Skin" />
         <h3>Ryt Skin</h3>
         <p>Product or graphics related to the Ryt Skin collection.</p>
         <div class="product-price">$25</div>
@@ -350,8 +316,9 @@
         </div>
       </div>
 
+      <!-- T-Shirt Design -->
       <div class="product-card">
-        <img src="website prototype/T-Shirt design.png" alt="T-Shirt Design" />
+        <img src="rytdesignsca-products-page/website/T-Shirt design.png" alt="T-Shirt Design" />
         <h3>T-Shirt Design</h3>
         <p>Bold custom t-shirt graphics, both front and back!</p>
         <div class="product-price">$22</div>
@@ -361,16 +328,7 @@
         </div>
       </div>
 
-      <div class="product-card">
-        <img src="website prototype/Ryt Designs (new logo) (1).png" alt="New Logo" />
-        <h3>New Logo Version</h3>
-        <p>Alternative new look for your branding needs.</p>
-        <div class="product-price">$30</div>
-        <div class="product-actions">
-          <button class="buy-btn" onclick="buyNow('New Logo Version', 30)">Buy Now</button>
-          <button onclick="addToCart('New Logo Version', 30)">Add to Cart</button>
-        </div>
-      </div>
+      <!-- Extra: For products/files not listed above, add as needed, using the path format. -->
 
     </div>
   </section>
