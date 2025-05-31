@@ -162,207 +162,87 @@ footer a:hover { color: var(--inverse-text-color);}
 <div class="products-grid">
 
 <!-- Poster / Flyer -->
-<div class="product-card">
-<img src="website prototype/Ryt Designs Poster.png" alt="Poster / Flyer" />
-<h3>Poster / Flyer Design</h3>
-<p>Custom posters or flyers for your next event, business, or announcement.</p>
-<div class="product-price">$15</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Poster/Flyer', 15)">Buy Now</button>
-<button onclick="addToCart('Poster/Flyer', 15)">Add to Cart</button>
+<!-- Portfolio Images -->
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Album%20cover.png" alt="A A itinerary.png">
+  <div class="caption">A A itinerary.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Product%20label.png" alt="Album cover.png">
+  <div class="caption">Album cover.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- Video for Events -->
-<div class="product-card">
-<img src="website prototype/Ryt Designs video.mp4" alt="Video for Events" />
-<h3>Event Video</h3>
-<p>Professionally crafted videos for events or social media.</p>
-<div class="product-price">$25</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Event Video', 25)">Buy Now</button>
-<button onclick="addToCart('Event Video', 25)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Skin.png" alt="Banner 4 website.png">
+  <div class="caption">Banner 4 website.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/T-Shirt%20design.png" alt="Logo 4 website.png">
+  <div class="caption">Logo 4 website.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- Business Cards -->
-<div class="product-card">
-<img src="website prototype/business card proto.jpg" alt="Business Card Design" />
-<h3>Business Card Design</h3>
-<p>Modern, eye-catching business card design tailored to you.</p>
-<div class="product-price">$20</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Business Card', 20)">Buy Now</button>
-<button onclick="addToCart('Business Card', 20)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Designs%20Poster.png" alt="Menu 4 website.png">
+  <div class="caption">Menu 4 website.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Product%20label.png" alt="Product label.png">
+  <div class="caption">Product label.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- Invitation -->
-<div class="product-card">
-<img src="website prototype/invitation 4 website.png" alt="Invitation Design" />
-<h3>Invitation Design</h3>
-<p>Customized invitations for all events and occasions.</p>
-<div class="product-price">$24</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Invitation', 24)">Buy Now</button>
-<button onclick="addToCart('Invitation', 24)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Designs%20Poster.png" alt="Ryt Designs Poster.png">
+  <div class="caption">Ryt Designs Poster.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Skin.png" alt="Ryt Skin.png">
+  <div class="caption">Ryt Skin.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- Logo -->
-<div class="product-card">
-<img src="website prototype/Logo 4 website.png" alt="Logo Design" />
-<h3>Logo Design</h3>
-<p>Professional logos to brand your business or projects.</p>
-<div class="product-price">$30</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Logo', 30)">Buy Now</button>
-<button onclick="addToCart('Logo', 30)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/T-Shirt%20design.png" alt="T-Shirt design.png">
+  <div class="caption">T-Shirt design.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Album%20cover.png" alt="Business card proto.jpg">
+  <div class="caption">Business card proto.jpg</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- YouTube Thumbnail (Basic) -->
-<div class="product-card">
-<img src="website prototype/youtube thumbnail 4 website.png" alt="YouTube Thumbnail" />
-<h3>YouTube Thumbnail (Basic)</h3>
-<p>Attention-grabbing thumbnails for your YouTube channel.</p>
-<div class="product-price">$20</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('YouTube Thumbnail (Basic)', 20)">Buy Now</button>
-<button onclick="addToCart('YouTube Thumbnail (Basic)', 20)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Product%20label.png" alt="Celeb 4 website.png">
+  <div class="caption">Celeb 4 website.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Skin.png" alt="Invitation 4 website.png">
+  <div class="caption">Invitation 4 website.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- YouTube Thumbnail (Add-ons) -->
-<div class="product-card">
-<img src="website prototype/youtube thumbnail 4 website.png" alt="YouTube Thumbnail Add-on" />
-<h3>YouTube Thumbnail (Add-ons)</h3>
-<p>Includes advanced enhancements or multiple variations.</p>
-<div class="product-price">$35</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('YouTube Thumbnail (Add-ons)', 35)">Buy Now</button>
-<button onclick="addToCart('YouTube Thumbnail (Add-ons)', 35)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/T-Shirt%20design.png" alt="Product 4 website.jpg">
+  <div class="caption">Product 4 website.jpg</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Designs%20Poster.png" alt="Ryt designs presentation.pdf">
+  <div class="caption">Ryt designs presentation.pdf</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- Celebration Card -->
-<div class="product-card">
-<img src="website prototype/Celeb 4 website.png" alt="Celebration Card" />
-<h3>Celebration Card</h3>
-<p>Fun, vibrant cards for birthdays, holidays, and celebrations.</p>
-<div class="product-price">$10</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Celebration Card', 10)">Buy Now</button>
-<button onclick="addToCart('Celebration Card', 10)">Add to Cart</button>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Product%20label.png" alt="Ryt designs video.mp4">
+  <div class="caption">Ryt designs video.mp4</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
+<div class="portfolio-item">
+  <img src="https://rytdesignsca.github.io/website%20prototype/Ryt%20Skin.png" alt="YouTube thumbnail 4 website.png">
+  <div class="caption">YouTube thumbnail 4 website.png</div>
+  <div class="label">RYT DESIGNS</div>
 </div>
-
-<!-- Presentation Design -->
-<div class="product-card">
-<img src="website prototype/Ryt Designs presentation.pdf" alt="Presentation" />
-<h3>Presentation Design</h3>
-<p>Visually appealing presentations to impress your audience.</p>
-<div class="product-price">$30</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Presentation', 30)">Buy Now</button>
-<button onclick="addToCart('Presentation', 30)">Add to Cart</button>
-</div>
-</div>
-
-<!-- Menu Design -->
-<div class="product-card">
-<img src="website prototype/Menu 4 website.png" alt="Menu Design" />
-<h3>Menu Design</h3>
-<p>Professional menus for restaurants, cafés, or events.</p>
-<div class="product-price">$20</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Menu', 20)">Buy Now</button>
-<button onclick="addToCart('Menu', 20)">Add to Cart</button>
-</div>
-</div>
-
-<!-- Banner -->
-<div class="product-card">
-<img src="website prototype/Banner 4 website.png" alt="Banner Design" />
-<h3>Banner Design</h3>
-<p>Bold and creative banners for web or print use.</p>
-<div class="product-price">$35</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Banner', 35)">Buy Now</button>
-<button onclick="addToCart('Banner', 35)">Add to Cart</button>
-</div>
-</div>
-
-<!-- Product Label -->
-<div class="product-card">
-<img src="website prototype/Product label.png" alt="Product Label" />
-<h3>Product Label Design</h3>
-<p>Attractive, informative product labeling for your brand.</p>
-<div class="product-price">$25</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Product Label', 25)">Buy Now</button>
-<button onclick="addToCart('Product Label', 25)">Add to Cart</button>
-</div>
-</div>
-
-<!-- Basic Designs (Simple Text or Graphics) -->
-<div class="product-card">
-<img src="website prototype/Album cover.png" alt="Basic Design" />
-<h3>Basic Designs (Simple Text/Graphics)</h3>
-<p>Simple graphics or text-based designs for various uses.<br/>Price depends on complexity.</p>
-<div class="product-price">$10 - $50</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Basic Design', 10)">Buy Now</button>
-<button onclick="addToCart('Basic Design', 10)">Add to Cart</button>
-</div>
-</div>
-
-<!-- Product Prototype Package (ZIP) -->
-<div class="product-card">
-<img src="website prototype/Ryt Designs package prototype.zip" alt="Product Prototype Package" />
-<h3>Product Prototype Package</h3>
-<p>Package includes full product design assets (ZIP Download).</p>
-<div class="product-price">Custom</div>
-<div class="product-actions">
-<button onclick="window.location.href='#contact'">Contact Us</button>
-</div>
-</div>
-
-<!-- Album Cover -->
-<div class="product-card">
-<img src="website prototype/Album cover.png" alt="Album Cover" />
-<h3>Album Cover</h3>
-<p>Get a custom album or song cover design.</p>
-<div class="product-price">$20</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Album Cover', 20)">Buy Now</button>
-<button onclick="addToCart('Album Cover', 20)">Add to Cart</button>
-</div>
-</div>
-
-<!-- Website Prototype -->
-<div class="product-card">
-<img src="website prototype/Website prototype.html" alt="Website Prototype" />
-<h3>Website Prototype</h3>
-<p>Clean and modern prototype designs for your website concepts.</p>
-<div class="product-price">Custom</div>
-<div class="product-actions">
-<button onclick="window.location.href='#contact'">Contact Us</button>
-</div>
-</div>
-
-<!-- Product Image Sample (jpg) -->
-<div class="product-card">
-<img src="website prototype/Product 4 website.jpg" alt="Product Sample" />
-<h3>Product Sample Image</h3>
-<p>Sample product visuals for your display or marketing needs.</p>
-<div class="product-price">$20</div>
-<div class="product-actions">
-<button class="buy-btn" onclick="buyNow('Product Sample', 20)">Buy Now</button>
-<button onclick="addToCart('Product Sample', 20)">Add to Cart</button>
-</div>
-</div>
-
 <!-- Other Items -->
 <div class="product-card">
 <img src="website prototype/Ryt Skin.png" alt="Ryt Skin" />
