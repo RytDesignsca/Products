@@ -179,12 +179,33 @@ footer {
 }
 footer a { color: var(--accent); text-decoration: none; font-weight: bold;}
 footer a:hover { color: var(--inverse-text-color);}
+.menu {
+  text-align: center;
+  margin: 1rem 0 0.7rem 0;
+}
+.menu a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 1px 0.4rem;
+  border-radius: 5px;
+  font-weight: 600;
+  color: var(--accent);
+  background: #f1f1f1;
+}
+.menu a:hover { background: var(--secondary-bg); color: darkcyan;}
 </style>
 </head>
 <body>
 <header>
   <h1>Products & Portfolio - RYT DESIGNS</h1>
 </header>
+
+<!-- Example Navigation/Menu -->
+<div class="menu">
+  <a class="back-home-btn" href="https://rytdesignsca.github.io/">&#8592; Back to Home</a>
+  <!-- Place the following link where you want users to go to Products page with cart transfer -->
+  <a href="javascript:void(0)" onclick="transferCartToProducts(); closeMenu();">Products</a>
+</div>
 
 <!-- CART SECTION -->
 <section class="cart-section" id="cart-section">
@@ -195,11 +216,6 @@ footer a:hover { color: var(--inverse-text-color);}
   <div class="cart-total" id="cart-total">Total: $0</div>
   <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
 </section>
-
-<!-- Back to Home Button -->
-<div style="width:100%;text-align:center;">
-  <a class="back-home-btn" href="https://rytdesignsca.github.io/">&#8592; Back to Home</a>
-</div>
 
 <!-- ALBUM COVER SECTION -->
 <div class="section-title">Album Cover</div>
@@ -268,45 +284,55 @@ footer a:hover { color: var(--inverse-text-color);}
 </footer>
 
 <script>
-let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-const cartList = document.getElementById('cart-list');
-const cartTotal = document.getElementById('cart-total');
+    // CART with sessionStorage and key 'rytCart'
+    let cart = JSON.parse(sessionStorage.getItem('rytCart') || '[]');
+    const cartList = document.getElementById('cart-list');
+    const cartTotal = document.getElementById('cart-total');
 
-// Updates the cart HTML & total
-function renderCart() {
-  cartList.innerHTML = '';
-  let total = 0;
-  if (cart.length === 0) {
-    cartList.innerHTML = '<li>Your cart is empty.</li>';
-  } else {
-    cart.forEach(item => {
-      total += item.price * item.quantity;
-      const li = document.createElement('li');
-      li.textContent = item.name + " x" + item.quantity + " - $" + (item.price * item.quantity);
-      cartList.appendChild(li);
-    });
-  }
-  cartTotal.textContent = "Total: $" + total;
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-function addToCart(name, price) {
-  const item = cart.find(i => i.name === name);
-  if (item) {
-    item.quantity += 1;
-  } else {
-    cart.push({ name, price, quantity: 1 });
-  }
-  renderCart();
-  alert(name + " has been added to your cart.");
-}
-function clearCart() {
-  cart = [];
-  renderCart();
-}
-function buyNow(name, price) {
-  alert(`Proceeding to buy ${name} for $${price}.`);
-}
-window.onload = renderCart;
+    function renderCart() {
+      cartList.innerHTML = '';
+      let total = 0;
+      if (cart.length === 0) {
+        cartList.innerHTML = '<li>Your cart is empty.</li>';
+      } else {
+        cart.forEach(item => {
+          total += item.price * item.quantity;
+          const li = document.createElement('li');
+          li.textContent = item.name + " x" + item.quantity + " - $" + (item.price * item.quantity);
+          cartList.appendChild(li);
+        });
+      }
+      cartTotal.textContent = "Total: $" + total;
+      sessionStorage.setItem('rytCart', JSON.stringify(cart));
+    }
+    function addToCart(name, price) {
+      const item = cart.find(i => i.name === name);
+      if (item) {
+        item.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      renderCart();
+      alert(name + " has been added to your cart.");
+    }
+    function clearCart() {
+      cart = [];
+      renderCart();
+    }
+    function buyNow(name, price) {
+      alert(`Proceeding to buy ${name} for $${price}.`);
+    }
+    // Transfer cart to products (sample, customize as needed)
+    function transferCartToProducts() {
+      // This function could redirect or update another page or modal
+      alert("Cart will be available on the products page!");
+      // Example (navigate to /products.html or whatever page):
+      // window.location.href = "/products.html";
+    }
+    function closeMenu() {
+      // Close your nav menu if you use a sidebar/drawer, else you can skip this
+    }
+    window.onload = renderCart;
 </script>
 </body>
 </html>
